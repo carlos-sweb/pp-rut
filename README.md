@@ -1,4 +1,4 @@
-# p-rut
+# pp-rut
 
 For more information [Wikipedia Link](https://es.wikipedia.org/wiki/Rol_%C3%9Anico_Tributario)
 
