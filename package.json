@@ -1,6 +1,6 @@
 {
   "name": "pp-rut",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Validate the Chilean R.U.T. and its verification digit",
   "main": "dist/pp-rut.min.js",
   "scripts": {
