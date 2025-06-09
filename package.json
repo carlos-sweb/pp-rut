@@ -1,0 +1,32 @@
+{
+  "name": "pp-rut",
+  "version": "1.0.0",
+  "description": "Validate the Chilean R.U.T. and its verification digit",
+  "main": "dist/pp-rut.min.js",
+  "scripts": {
+    "build": "rollup -c && terser -o ./dist/pp-rut.nd.min.js  --compress --mangle --comments false -- ./dist/pp-rut.nd.rollup.js && terser -o ./dist/pp-rut.min.js  --compress --mangle --comments false -- ./dist/pp-rut.rollup.js && cp ./dist/pp-rut.nd.min.js ./www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlos-sweb/pp-rut.git"
+  },
+  "keywords": [
+    "rut",
+    "rut chilean",
+    "ssi chilean",
+    "run",
+    "id chilean",
+    "rut chileno",
+    "id chileno",
+    "rut verificador"
+  ],
+  "author": "Carlos Illesca",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carlos-sweb/pp-rut/issues"
+  },
+  "homepage": "https://github.com/carlos-sweb/pp-rut#readme",
+  "dependencies": {
+    "pp-is": "^1.2.6"
+  }
+}

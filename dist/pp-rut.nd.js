@@ -5,7 +5,8 @@
  * Released under the MIT License
  */ 
 
-import {isString,isUndefined} from "pp-is"
+import isString from "./../node_modules/pp-is/dist/main/isString.js"
+import isUndefined from "./../node_modules/pp-is/dist/main/isUndefined.js"
 /**
  * @name clean
  * @description - removes everything that is not a digit 0-9
@@ -66,21 +67,9 @@ ppRut = function(rut="0",digitV=undefined){
 
 	})(rut) : isInt(rut) ? rut.toString() : "0"
 
-	/**
-	 * @name format
-	 * @description - Create an output format with two variables, one for the thousands separator and the second for the check digit separator.
-	 * @param separate_miles {String } default "."
-	 * @param separate_digit {String } default "-"
-	 * @return {String}
-	 * */	
+	
 	self.format=(separate_miles=".",separate_digit="-")=>self.body.split("").reverse().map((n_string,indice)=>n_string+( isInt( (indice+1)/3 ) ? separate_miles:"")).join("").split("").reverse().concat([separate_digit,self.getDigit()]).join("")	
-	/**
-	 * @name 
-	 * */
 	self.checkDigit=(digit=undefined)=>self.getDigit() === (isUndefined(digit) ? self.digit : (isInt(digit) ? numberToDigitV(digit) : digit ) )	
-/**
-	 * @name get
-	 * */
 	self.getDigit=()=>{		
 		let multiplier = 2,initialValue=0,
 		total = self.body		

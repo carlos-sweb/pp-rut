@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rut - Validate</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  </head>
+  <body>
+  <section class="section ">
+    <div class="container">    
+      <h1 class="title">pp-rut</h1>
+      <div class="field has-addons">
+  <div class="control"><input id="rut" class="input" type="text" placeholder="chilean rut"></div>
+  <div class="control"><button id="brut" class="button">Check</button></div>
+</div>
+    </div>
+    <br>    
+    <div class="container">
+  		<p>Digit : <span id="digit"></span></p>
+  		<p>Result : <span id="result_format"></span></p>
+  	</div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <p><a href="https://github.com/carlos-sweb/pp-rut">Doc >></p></a>
+    </div>  	
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/pp-is/dist/pp-rut.nd.min.js" ></script>
+  <script>
+  		const byId=(id)=>document.getElementById(id),
+		inputRut = byId("rut"),
+		button = byId("brut"),
+		result = byId("result_format"),
+		digit = byId("digit")
+
+		button.addEventListener("click",function(){
+			const rut = ppRut(inputRut.value)
+			digit.innerText = 
+			(rut.digit == "" ? "No Found":rut.digit)+" "+(rut.checkDigit() ? "OK":"Error")
+			console.log(  );			
+			result.innerText = rut.format()
+		});
+  </script>
+  </body>
+</html>
