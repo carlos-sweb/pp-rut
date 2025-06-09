@@ -12,13 +12,13 @@ In the web project include pp-rut with:
 
 ```html
 <!--no dependencies used nd file-->
-<script src="https://cdn.jsdelivr.net/npm/pp-is/dist/pp-rut.nd.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/pp-rut/dist/pp-rut.nd.min.js" ></script>
 ```
 Or 
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/pp-is/dist/pp-is.min.js" ></script>
-<script src="https://cdn.jsdelivr.net/npm/pp-is/dist/pp-rut.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/pp-rut/dist/pp-rut.min.js" ></script>
 ```
 
 Or
