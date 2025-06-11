@@ -28,17 +28,15 @@
   </section>
   <script src="https://cdn.jsdelivr.net/npm/pp-rut/dist/pp-rut.nd.min.js" ></script>
   <script>
-  		const byId=(id)=>document.getElementById(id),
+    const byId=(id)=>document.getElementById(id),
 		inputRut = byId("rut"),
 		button = byId("brut"),
 		result = byId("result_format"),
 		digit = byId("digit")
-
 		button.addEventListener("click",function(){
 			const rut = ppRut(inputRut.value)
 			digit.innerText = 
-			(rut.digit == "" ? "No Found":rut.digit)+" "+(rut.checkDigit() ? "OK":"Error")
-			console.log(  );			
+			(rut.digit == "" ? "No Found":rut.digit)+" "+(rut.checkDigit() ? "OK":"Error")					
 			result.innerText = rut.format()
 		});
   </script>
